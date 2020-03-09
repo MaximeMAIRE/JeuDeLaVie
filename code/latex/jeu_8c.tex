@@ -1,0 +1,83 @@
+\hypertarget{jeu_8c}{}\section{src/jeu.c File Reference}
+\label{jeu_8c}\index{src/jeu.\+c@{src/jeu.\+c}}
+{\ttfamily \#include \char`\"{}jeu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}io.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grille.\+h\char`\"{}}\newline
+Include dependency graph for jeu.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{jeu_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{jeu_8c_a919a35926d94b71717909ecc50233f26}{compte\+\_\+voisins\+\_\+vivants\+\_\+cyclique} (int i, int j, \hyperlink{structgrille}{grille} g)
+\item 
+int \hyperlink{jeu_8c_a2e8fdd206d197391527920bbbc137eef}{compte\+\_\+voisins\+\_\+vivants\+\_\+non\+\_\+cyclique} (int i, int j, \hyperlink{structgrille}{grille} g)
+\item 
+void \hyperlink{jeu_8c_ada8f751a97ad1847db23c5ba17be7802}{evolue} (\hyperlink{structgrille}{grille} $\ast$g, \hyperlink{structgrille}{grille} $\ast$gc)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+code pour les fonctions d\textquotesingle{}evolutions \begin{DoxyAuthor}{Author}
+Maxime M\+A\+I\+RE 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{jeu_8c_a919a35926d94b71717909ecc50233f26}\label{jeu_8c_a919a35926d94b71717909ecc50233f26}} 
+\index{jeu.\+c@{jeu.\+c}!compte\+\_\+voisins\+\_\+vivants\+\_\+cyclique@{compte\+\_\+voisins\+\_\+vivants\+\_\+cyclique}}
+\index{compte\+\_\+voisins\+\_\+vivants\+\_\+cyclique@{compte\+\_\+voisins\+\_\+vivants\+\_\+cyclique}!jeu.\+c@{jeu.\+c}}
+\subsubsection{\texorpdfstring{compte\+\_\+voisins\+\_\+vivants\+\_\+cyclique()}{compte\_voisins\_vivants\_cyclique()}}
+{\footnotesize\ttfamily int compte\+\_\+voisins\+\_\+vivants\+\_\+cyclique (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{\hyperlink{structgrille}{grille}}]{g }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & est un entier representant la ieme ligne de la grille g \\
+\hline
+{\em j} & est un entier representant la jeme colonne de la grille g \\
+\hline
+{\em g} & est une grille \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne un entier, representant le nombre de voisin (en mode cyclique) d\textquotesingle{}une case de ligne i et de colonne j d\textquotesingle{}une grille g 
+\end{DoxyReturn}
+\mbox{\Hypertarget{jeu_8c_a2e8fdd206d197391527920bbbc137eef}\label{jeu_8c_a2e8fdd206d197391527920bbbc137eef}} 
+\index{jeu.\+c@{jeu.\+c}!compte\+\_\+voisins\+\_\+vivants\+\_\+non\+\_\+cyclique@{compte\+\_\+voisins\+\_\+vivants\+\_\+non\+\_\+cyclique}}
+\index{compte\+\_\+voisins\+\_\+vivants\+\_\+non\+\_\+cyclique@{compte\+\_\+voisins\+\_\+vivants\+\_\+non\+\_\+cyclique}!jeu.\+c@{jeu.\+c}}
+\subsubsection{\texorpdfstring{compte\+\_\+voisins\+\_\+vivants\+\_\+non\+\_\+cyclique()}{compte\_voisins\_vivants\_non\_cyclique()}}
+{\footnotesize\ttfamily int compte\+\_\+voisins\+\_\+vivants\+\_\+non\+\_\+cyclique (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{\hyperlink{structgrille}{grille}}]{g }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & est un entier representant la ieme ligne de la grille g \\
+\hline
+{\em j} & est un entier representant la jeme colonne de la grille g \\
+\hline
+{\em g} & est une grille \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne un entier, representant le nombre de voisin (en mode non cyclique) d\textquotesingle{}une case de ligne i et de colonne j d\textquotesingle{}une grille g 
+\end{DoxyReturn}
+\mbox{\Hypertarget{jeu_8c_ada8f751a97ad1847db23c5ba17be7802}\label{jeu_8c_ada8f751a97ad1847db23c5ba17be7802}} 
+\index{jeu.\+c@{jeu.\+c}!evolue@{evolue}}
+\index{evolue@{evolue}!jeu.\+c@{jeu.\+c}}
+\subsubsection{\texorpdfstring{evolue()}{evolue()}}
+{\footnotesize\ttfamily void evolue (\begin{DoxyParamCaption}\item[{\hyperlink{structgrille}{grille} $\ast$}]{g,  }\item[{\hyperlink{structgrille}{grille} $\ast$}]{gc }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$g} & est un pointeur sur la grille g \\
+\hline
+{\em $\ast$gc} & est un pointeur sur la grille gc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne vide, mais evolue la grille passé en argument 
+\end{DoxyReturn}

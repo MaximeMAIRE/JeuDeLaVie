@@ -1,0 +1,107 @@
+\hypertarget{io_8c}{}\section{src/io.c File Reference}
+\label{io_8c}\index{src/io.\+c@{src/io.\+c}}
+{\ttfamily \#include \char`\"{}io.\+h\char`\"{}}\newline
+Include dependency graph for io.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{io_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{io_8c_a634cf584c380ce221d5d4199f3e813bd}{affiche\+\_\+trait} (int c)
+\item 
+void \hyperlink{io_8c_a3f3ff78e56fcf21a932ff73b70635554}{affiche\+\_\+ligne} (int c, int $\ast$ligne)
+\item 
+void \hyperlink{io_8c_a90cb8ec05374b46d9995705ed4954f34}{affiche\+\_\+grille} (\hyperlink{structgrille}{grille} g)
+\item 
+void \hyperlink{io_8c_ab36a6f8957cd3e682119007836ce6ad5}{efface\+\_\+grille} (\hyperlink{structgrille}{grille} g)
+\item 
+void \hyperlink{io_8c_a88493b3c55828670e47150a95ed7db5b}{debut\+\_\+jeu} (\hyperlink{structgrille}{grille} $\ast$g, \hyperlink{structgrille}{grille} $\ast$gc)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+code pour les fonctions d\textquotesingle{}affichages \begin{DoxyAuthor}{Author}
+Maxime M\+A\+I\+RE 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{io_8c_a90cb8ec05374b46d9995705ed4954f34}\label{io_8c_a90cb8ec05374b46d9995705ed4954f34}} 
+\index{io.\+c@{io.\+c}!affiche\+\_\+grille@{affiche\+\_\+grille}}
+\index{affiche\+\_\+grille@{affiche\+\_\+grille}!io.\+c@{io.\+c}}
+\subsubsection{\texorpdfstring{affiche\+\_\+grille()}{affiche\_grille()}}
+{\footnotesize\ttfamily void affiche\+\_\+grille (\begin{DoxyParamCaption}\item[{\hyperlink{structgrille}{grille}}]{g }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & est une grille \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne vide, mais affiche la grille g 
+\end{DoxyReturn}
+\mbox{\Hypertarget{io_8c_a3f3ff78e56fcf21a932ff73b70635554}\label{io_8c_a3f3ff78e56fcf21a932ff73b70635554}} 
+\index{io.\+c@{io.\+c}!affiche\+\_\+ligne@{affiche\+\_\+ligne}}
+\index{affiche\+\_\+ligne@{affiche\+\_\+ligne}!io.\+c@{io.\+c}}
+\subsubsection{\texorpdfstring{affiche\+\_\+ligne()}{affiche\_ligne()}}
+{\footnotesize\ttfamily void affiche\+\_\+ligne (\begin{DoxyParamCaption}\item[{int}]{c,  }\item[{int $\ast$}]{ligne }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & est le nombre de colonne a affiché \\
+\hline
+{\em ligne} & est un pointeur sur entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne vide, mais affiche des caracteres 
+\end{DoxyReturn}
+\mbox{\Hypertarget{io_8c_a634cf584c380ce221d5d4199f3e813bd}\label{io_8c_a634cf584c380ce221d5d4199f3e813bd}} 
+\index{io.\+c@{io.\+c}!affiche\+\_\+trait@{affiche\+\_\+trait}}
+\index{affiche\+\_\+trait@{affiche\+\_\+trait}!io.\+c@{io.\+c}}
+\subsubsection{\texorpdfstring{affiche\+\_\+trait()}{affiche\_trait()}}
+{\footnotesize\ttfamily void affiche\+\_\+trait (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & est le nombre de colonne a affiché \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne vide, mais affiche des caracteres 
+\end{DoxyReturn}
+\mbox{\Hypertarget{io_8c_a88493b3c55828670e47150a95ed7db5b}\label{io_8c_a88493b3c55828670e47150a95ed7db5b}} 
+\index{io.\+c@{io.\+c}!debut\+\_\+jeu@{debut\+\_\+jeu}}
+\index{debut\+\_\+jeu@{debut\+\_\+jeu}!io.\+c@{io.\+c}}
+\subsubsection{\texorpdfstring{debut\+\_\+jeu()}{debut\_jeu()}}
+{\footnotesize\ttfamily void debut\+\_\+jeu (\begin{DoxyParamCaption}\item[{\hyperlink{structgrille}{grille} $\ast$}]{g,  }\item[{\hyperlink{structgrille}{grille} $\ast$}]{gc }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$g} & est un pointeur sur la grille g \\
+\hline
+{\em $\ast$gc} & est un pointeur sur la grille gc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne vide, mais efface la grille g 
+\end{DoxyReturn}
+\mbox{\Hypertarget{io_8c_ab36a6f8957cd3e682119007836ce6ad5}\label{io_8c_ab36a6f8957cd3e682119007836ce6ad5}} 
+\index{io.\+c@{io.\+c}!efface\+\_\+grille@{efface\+\_\+grille}}
+\index{efface\+\_\+grille@{efface\+\_\+grille}!io.\+c@{io.\+c}}
+\subsubsection{\texorpdfstring{efface\+\_\+grille()}{efface\_grille()}}
+{\footnotesize\ttfamily void efface\+\_\+grille (\begin{DoxyParamCaption}\item[{\hyperlink{structgrille}{grille}}]{g }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & est une grille \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne vide, mais efface la grille g 
+\end{DoxyReturn}

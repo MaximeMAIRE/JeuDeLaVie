@@ -1,0 +1,95 @@
+\hypertarget{jeu_8h}{}\section{include/jeu.h File Reference}
+\label{jeu_8h}\index{include/jeu.\+h@{include/jeu.\+h}}
+{\ttfamily \#include \char`\"{}grille.\+h\char`\"{}}\newline
+Include dependency graph for jeu.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{jeu_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{jeu_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{jeu_8h_a2e8fdd206d197391527920bbbc137eef}{compte\+\_\+voisins\+\_\+vivants\+\_\+non\+\_\+cyclique} (int i, int j, \hyperlink{structgrille}{grille} g)
+\item 
+void \hyperlink{jeu_8h_ada8f751a97ad1847db23c5ba17be7802}{evolue} (\hyperlink{structgrille}{grille} $\ast$g, \hyperlink{structgrille}{grille} $\ast$gc)
+\item 
+int \hyperlink{jeu_8h_a919a35926d94b71717909ecc50233f26}{compte\+\_\+voisins\+\_\+vivants\+\_\+cyclique} (int i, int j, \hyperlink{structgrille}{grille} g)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{jeu_8h_a56e91f37f1e0eba65fc9f1dd39841b25}\label{jeu_8h_a56e91f37f1e0eba65fc9f1dd39841b25}} 
+int($\ast$ {\bfseries voisins\+\_\+vivants} )(int, int, \hyperlink{structgrille}{grille})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+header pour les fonctions d\textquotesingle{}evolution \begin{DoxyAuthor}{Author}
+Maxime M\+A\+I\+RE 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{jeu_8h_a919a35926d94b71717909ecc50233f26}\label{jeu_8h_a919a35926d94b71717909ecc50233f26}} 
+\index{jeu.\+h@{jeu.\+h}!compte\+\_\+voisins\+\_\+vivants\+\_\+cyclique@{compte\+\_\+voisins\+\_\+vivants\+\_\+cyclique}}
+\index{compte\+\_\+voisins\+\_\+vivants\+\_\+cyclique@{compte\+\_\+voisins\+\_\+vivants\+\_\+cyclique}!jeu.\+h@{jeu.\+h}}
+\subsubsection{\texorpdfstring{compte\+\_\+voisins\+\_\+vivants\+\_\+cyclique()}{compte\_voisins\_vivants\_cyclique()}}
+{\footnotesize\ttfamily int compte\+\_\+voisins\+\_\+vivants\+\_\+cyclique (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{\hyperlink{structgrille}{grille}}]{g }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & est un entier representant la ieme ligne de la grille g \\
+\hline
+{\em j} & est un entier representant la jeme colonne de la grille g \\
+\hline
+{\em g} & est une grille \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne un entier, representant le nombre de voisin (en mode cyclique) d\textquotesingle{}une case de ligne i et de colonne j d\textquotesingle{}une grille g 
+\end{DoxyReturn}
+\mbox{\Hypertarget{jeu_8h_a2e8fdd206d197391527920bbbc137eef}\label{jeu_8h_a2e8fdd206d197391527920bbbc137eef}} 
+\index{jeu.\+h@{jeu.\+h}!compte\+\_\+voisins\+\_\+vivants\+\_\+non\+\_\+cyclique@{compte\+\_\+voisins\+\_\+vivants\+\_\+non\+\_\+cyclique}}
+\index{compte\+\_\+voisins\+\_\+vivants\+\_\+non\+\_\+cyclique@{compte\+\_\+voisins\+\_\+vivants\+\_\+non\+\_\+cyclique}!jeu.\+h@{jeu.\+h}}
+\subsubsection{\texorpdfstring{compte\+\_\+voisins\+\_\+vivants\+\_\+non\+\_\+cyclique()}{compte\_voisins\_vivants\_non\_cyclique()}}
+{\footnotesize\ttfamily int compte\+\_\+voisins\+\_\+vivants\+\_\+non\+\_\+cyclique (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{\hyperlink{structgrille}{grille}}]{g }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & est un entier representant la ieme ligne de la grille g \\
+\hline
+{\em j} & est un entier representant la jeme colonne de la grille g \\
+\hline
+{\em g} & est une grille \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne un entier, representant le nombre de voisin (en mode non cyclique) d\textquotesingle{}une case de ligne i et de colonne j d\textquotesingle{}une grille g 
+\end{DoxyReturn}
+\mbox{\Hypertarget{jeu_8h_ada8f751a97ad1847db23c5ba17be7802}\label{jeu_8h_ada8f751a97ad1847db23c5ba17be7802}} 
+\index{jeu.\+h@{jeu.\+h}!evolue@{evolue}}
+\index{evolue@{evolue}!jeu.\+h@{jeu.\+h}}
+\subsubsection{\texorpdfstring{evolue()}{evolue()}}
+{\footnotesize\ttfamily void evolue (\begin{DoxyParamCaption}\item[{\hyperlink{structgrille}{grille} $\ast$}]{g,  }\item[{\hyperlink{structgrille}{grille} $\ast$}]{gc }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$g} & est un pointeur sur la grille g \\
+\hline
+{\em $\ast$gc} & est un pointeur sur la grille gc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne vide, mais evolue la grille passé en argument 
+\end{DoxyReturn}
