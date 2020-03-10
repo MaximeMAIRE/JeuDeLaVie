@@ -6,12 +6,6 @@
 
 #include "io.h"
 
-
-/** 
- * \fn void affiche_trait(int c);
- * \param c est le nombre de colonne a affiché
- * \return Retourne vide, mais affiche des caracteres
- */
 void affiche_trait (int c){
 	int i;
 	for (i=0; i<c; ++i) printf ("|---");
@@ -20,29 +14,28 @@ void affiche_trait (int c){
 }
 
 
-/** 
- * \fn void affiche_ligne(int c, int* ligne);
- * \param c est le nombre de colonne a affiché
- * \param ligne est un pointeur sur entier
- * \return Retourne vide, mais affiche des caracteres
- */
 void affiche_ligne (int c, int* ligne){
 	int i;
-	for (i=0; i<c; ++i) 
+	for (i=0; i<c; ++i)
+	{
 		if (vieillissement==1)
-			if (ligne[i] == 0 ) printf ("|   "); else printf ("| %d ",ligne[i]);		
+		{
+			if (ligne[i]==0) printf("|   ");
+			else if(ligne[i]==-1) printf("|%d ",ligne[i]);
+			else printf ("| %d ",ligne[i]);		
+		}
 		else
-			if (ligne[i] == 0 ) printf ("|   "); else printf ("| 0 ");
+		{	
+			if (ligne[i]==0) printf("|   ");
+			else if(ligne[i]==-1) printf("|%d ",ligne[i]); 
+			else printf("| 0 ");
+		}
+	}
 	printf("|\n");
 	return;
 }
 
 
-/** 
- * \fn void affiche_grille (grille g);
- * \param g est une grille
- * \return Retourne vide, mais affiche la grille g
- */
 void affiche_grille (grille g){
 	int i, l=g.nbl, c=g.nbc;
 	printf("\033[100A");
@@ -57,22 +50,11 @@ void affiche_grille (grille g){
 }
 
 
-/** 
- * \fn void efface_grille (grille g);
- * \param g est une grille
- * \return Retourne vide, mais efface la grille g
- */
 void efface_grille (grille g){
 	printf("\n\e[%dA",g.nbl*2 + 5); 
 }
 
 
-/** 
- * \fn void debut_jeu (grille *g,grille *gc);
- * \param *g est un pointeur sur la grille g
- * \param *gc est un pointeur sur la grille gc
- * \return Retourne vide, mais efface la grille g
- */
 void debut_jeu(grille *g, grille *gc){
 	voisins_vivants = compte_voisins_vivants_non_cyclique;
 	int a = 1;

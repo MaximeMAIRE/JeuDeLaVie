@@ -7,13 +7,7 @@
  * \author Maxime MAIRE
  */
 
-/** 
- * \fn int compte_voisins_vivants_cyclique(int i, int j, grille g);
- * \param i est un entier representant la ieme ligne de la grille g
- * \param j est un entier representant la jeme colonne de la grille g
- * \param g est une grille
- * \return Retourne un entier, representant le nombre de voisin (en mode cyclique) d'une case de ligne i et de colonne j d'une grille g
- */
+
 int compte_voisins_vivants_cyclique (int i, int j, grille g){
 	int v = 0, l=g.nbl, c = g.nbc;
 	v+= est_vivante(modulo(i-1,l),modulo(j-1,c),g);
@@ -28,13 +22,7 @@ int compte_voisins_vivants_cyclique (int i, int j, grille g){
 	return v; 
 }
 
-/** 
- * \fn int compte_voisins_vivants_non_cyclique(int i, int j, grille g);
- * \param i est un entier representant la ieme ligne de la grille g
- * \param j est un entier representant la jeme colonne de la grille g
- * \param g est une grille
- * \return Retourne un entier, representant le nombre de voisin (en mode non cyclique) d'une case de ligne i et de colonne j d'une grille g
- */
+
 int compte_voisins_vivants_non_cyclique (int i, int j, grille g){
 	int vc = 0, l=g.nbl-1, c = g.nbc-1;
 
@@ -107,12 +95,7 @@ int compte_voisins_vivants_non_cyclique (int i, int j, grille g){
 }
 
 
-/** 
- * \fn void evolue (grille *g, grille *gc);
- * \param *g est un pointeur sur la grille g
- * \param *gc est un pointeur sur la grille gc
- * \return Retourne vide, mais evolue la grille passé en argument
- */
+
 void evolue (grille *g, grille *gc){
 	copie_grille (*g,*gc); // copie temporaire de la grille
 	int i,j,l=g->nbl, c = g->nbc,v;
@@ -136,7 +119,7 @@ void evolue (grille *g, grille *gc){
 					}
 				}
 			}
-			else 
+			else if (est_viable(i,j,*g))
 			{ // evolution d'une cellule morte
 				if ( v==3 ) set_vivante(i,j,*g);
 			}

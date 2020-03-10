@@ -1,6 +1,6 @@
 Projet : Jeu_De_La_Vie
 
-Ce programme contient toute les fonctionnalités des 2 premiers niveau du jeu de la vie.
+Ce programme contient toute les fonctionnalités des 3 premiers niveau du jeu de la vie.
 Pour compiler ce porgramme : make
 Pour suprimmer tout les executables : make clean
 Pour lancé le programme une fois compilé : bin/main <le nom d'une grille>
