@@ -23,4 +23,4 @@ doc:
 	doxygen Doxyfile
 
 dist:
-	tar -zcvf MaximeMaire_GoL_3.tar.gz obj/ src/ include/ ./Doxyfile makefile
+	tar -zcvf MaximeMaire_GoL_3.tar.gz bin/ obj/ src/ include/ ./Doxyfile makefile
