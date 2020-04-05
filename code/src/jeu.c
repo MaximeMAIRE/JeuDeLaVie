@@ -1,6 +1,9 @@
 #include "jeu.h"
 #include "io.h"
 #include "grille.h"
+
+extern int vieillissement;
+
 /** 
  * \file jeu.c 
  * code pour les fonctions d'evolutions
