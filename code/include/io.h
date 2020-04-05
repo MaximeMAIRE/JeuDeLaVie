@@ -5,6 +5,11 @@
 #include "grille.h"
 #include "jeu.h"
 
+#ifdef MODE_GRA
+#include <cairo.h>
+#include <cairo-xlib.h>
+#include <X11/Xlib.h>
+#endif
 
 /** 
  * \file io.h
@@ -50,11 +55,29 @@ void efface_grille (grille g);
  * \fn void debut_jeu (grille *g,grille *gc);
  * \param *g est un pointeur sur la grille g
  * \param *gc est un pointeur sur la grille gc
- * \return Retourne vide, mais efface la grille g
+ * \return Retourne vide, mais fait tourner le jeu
  */
 void debut_jeu(grille *g, grille *gc);
 
+#ifdef MODE_GRA
 
+// affiche la fenetre graphique
+/** 
+ * \fn void paint(cairo_surface_t *surface, grille *g);
+ * \param *surface est la zone alloué pour affiché la grille
+ * \param *g est un pointeur sur la grille gc
+ * \return Retourne vide, mais affiche une fenetre graphique
+ */
+void paint(cairo_surface_t *surface, grille *g);
 
+// debute le jeu en version graphique
+/** 
+ * \fn void debut_jeu_cairo (grille *g, grille *gc);
+ * \param *g est un pointeur sur la grille g
+ * \param *gc est un pointeur sur la grille gc
+ * \return Retourne vide, mais fait tourner le jeu graphiquement
+ */
+void debut_jeu_cairo(grille *g, grille *gc);
+#endif
 
 #endif
