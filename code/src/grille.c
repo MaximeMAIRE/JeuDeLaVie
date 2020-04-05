@@ -2,6 +2,7 @@
 #include "io.h"
 
 
+
 /** 
  * \file grille.c
  * code pour les fonctions sur les grilles
@@ -83,4 +84,20 @@ void copie_grille (grille gs, grille gd){
 	int i, j;
 	for (i=0; i<gs.nbl; ++i) for (j=0; j<gs.nbc; ++j) gd.cellules[i][j] = gs.cellules[i][j];
 	return;	
+}
+
+int test_grille_eg(grille gs, grille gd)
+{
+	for (int i=0;i<gs.nbl;i++)
+	{
+		for (int j=0;j<gs.nbc;j++)
+		{
+			if(gs.cellules[i][j] !=gd.cellules[i][j])
+			{
+				return 0;
+
+			}
+		}
+	}
+	return 1;
 }
