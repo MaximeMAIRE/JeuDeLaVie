@@ -98,6 +98,13 @@ static inline int est_viable(int i, int j, grille g){return g.cellules[i][j] != 
  */
 void copie_grille (grille gs, grille gd);
 
-int vieillissement;
+// test si gs et gd sont égaux
+/** 
+ * \fn void copie_grille(grille gs, grille gd);
+ * \param gs est une grille 
+ * \param gd est une grille
+ * \return Retourne vide, mais revoie 1 si les grilles sont identiques et sinon 0
+ */
+int test_grille_eg(grille gs, grille gd);
 
 #endif
