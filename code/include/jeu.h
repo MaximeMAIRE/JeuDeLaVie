@@ -34,7 +34,7 @@ int compte_voisins_vivants_non_cyclique (int i, int j, grille g);
 void evolue (grille *g, grille *gc);
 
 // pointeur de fonction
-int (*voisins_vivants) (int,int,grille);
+extern int (*voisins_vivants) (int,int,grille);
 
 // compte le nombre de voisins vivants de la cellule (i,j)
 // les bords sont non cycliques

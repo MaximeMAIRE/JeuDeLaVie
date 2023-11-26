@@ -3,6 +3,7 @@
 #include "grille.h"
 
 extern int vieillissement;
+int (*voisins_vivants) (int,int,grille) = compte_voisins_vivants_cyclique;
 
 /** 
  * \file jeu.c 

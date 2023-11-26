@@ -6,7 +6,6 @@ vpath %.o obj
 vpath %.h include
 vpath %.c src
 
-
 CPPFLAGS = -Iinclude
 LDFLAGS = 
 ifneq ($(MODE),Text)
@@ -15,16 +14,16 @@ ifneq ($(MODE),Text)
 endif
 
 bin/main : $(COBJ)
+	mkdir -p bin
 	gcc -g -Wall -o $@ $^ $(CPPFLAGS) $(LDFLAGS) 
 
-
 obj/%.o : %.c $(CHEADER)
+	mkdir -p obj
 	gcc -g -Wall -o $@ -c $< $(CPPFLAGS) $(LDFLAGS) $(DFLAGS)
 
-
 clean:
-	rm obj/*
-	rm bin/main
+	rm -rf obj/*
+	rm -rf bin/*
 
 doc:
 	doxygen Doxyfile
